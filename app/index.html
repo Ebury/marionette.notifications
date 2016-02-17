@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="How to display global notifications for an application using Backbone and Marionette">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Global notifications using Marionette and Backbone</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="https://github.com/Ebury">Ebury</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <h1>Global notifications with Marionette</h1>
+
+      <p class="lead">Demo</p>
+
+      <button type="button" class="btn btn-success js-add-notification" data-notification-type="success">Add success notification</button>
+      <button type="button" class="btn btn-danger js-add-notification" data-notification-type="danger">Add error notification</button>
+      <button type="button" class="btn btn-warning js-add-notification" data-notification-type="warning">Add warning notification</button>
+      <button type="button" class="btn btn-info js-add-notification" data-notification-type="info">Add info notification</button>
+
+    </div>
+
+    <script type="text/template" class="js-notification-template">
+      <div class="alert alert-<%= type %> alert-dismissible" role="alert">
+        <button type="button" class="close js-notification-close" data-dismiss="alert">&times;</button>
+        <strong><%= message %></strong>
+      </div>
+    </script>
+
+    <div class="js-notifications-view"></div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/underscore/underscore.js"></script>
+    <script src="/bower_components/backbone/backbone.js"></script>
+    <script src="/bower_components/backbone.babysitter/lib/backbone.babysitter.js"></script>
+    <script src="/bower_components/backbone.wreqr/lib/backbone.wreqr.js"></script>
+    <script src="/bower_components/backbone.marionette/lib/core/backbone.marionette.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/marionette.notifications.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
