@@ -1,6 +1,6 @@
 'use strict';
 
-/* globals Marionette, Backbone */
+/* globals Marionette, Backbone, _ */
 
 var oldConstructor = Marionette.Application;
 
@@ -71,7 +71,7 @@ Marionette.Application = Marionette.Application.extend({
           // Auto-removes the notification after notificationAutoremoveAfter seconds
           this.to = setTimeout(function () {
             _this.close();
-          }, this.options.notificationAutoremoveAfter*1000);
+          }, this.options.notificationAutoremoveAfter * 1000);
         }
       },
 
@@ -114,7 +114,7 @@ Marionette.Application = Marionette.Application.extend({
         childView.init();
       },
 
-      childViewOptions: function(model, index) {
+      childViewOptions: function() {
         return {
           notificationAnimation: this.options.notificationAnimation,
           notificationAutoremove: this.options.notificationAnimation,
