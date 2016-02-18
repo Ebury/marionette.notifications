@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="How to display global notifications for an application using Backbone and Marionette">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Global notifications using Marionette and Backbone</title>
+    <title>marionette.notifications.js: global notifications using Marionette and Backbone</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -25,21 +25,29 @@
     <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="https://github.com/Ebury">Ebury</a>
+          <a class="navbar-brand" href="https://github.com/Ebury/marionette.notifications/">marionette.notifications.js</a>
         </div>
       </div>
     </nav>
 
     <div class="container">
 
-      <h1>Global notifications with Marionette</h1>
+      <h2>Demo using <a href="https://github.com/Ebury/marionette.notifications/">marionette.notifications.js</a></h2>
 
-      <p class="lead">Demo</p>
+      <p>Click one of the buttons below to add a global notification. This demo is using the default configuration.</p>
 
-      <button type="button" class="btn btn-success js-add-notification" data-notification-type="success">Add success notification</button>
-      <button type="button" class="btn btn-danger js-add-notification" data-notification-type="danger">Add error notification</button>
-      <button type="button" class="btn btn-warning js-add-notification" data-notification-type="warning">Add warning notification</button>
-      <button type="button" class="btn btn-info js-add-notification" data-notification-type="info">Add info notification</button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-success js-add-notification" data-notification-type="success">Add success notification</button>
+        <button type="button" class="btn btn-danger js-add-notification" data-notification-type="danger">Add error notification</button>
+        <button type="button" class="btn btn-warning js-add-notification" data-notification-type="warning">Add warning notification</button>
+        <button type="button" class="btn btn-info js-add-notification" data-notification-type="info">Add info notification</button>
+      </div>
+
+      <hr>
+
+      <p>
+        <a href="https://github.com/Ebury/marionette.notifications/tree/demo">Demo source code</a>
+      </p>
 
     </div>
 
