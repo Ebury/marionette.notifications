@@ -1,0 +1,33 @@
+{
+  "name": "marionette.notifications",
+  "description": "Global notifications for a Marionette application",
+  "main": "./dist/marionette.notifications.js",
+  "version": "0.0.1",
+  "authors": [
+    "Miguel Torres <miguel.torres@ebury.com>"
+  ],
+  "keywords": [
+    "backbone",
+    "marionette",
+    "notifications"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Ebury/marionette.notifications",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".babelrc",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    "gulpfile.babel.js"
+  ],
+  "dependencies": {
+    "backbone.marionette": "^2.4.4"
+  }
+}
