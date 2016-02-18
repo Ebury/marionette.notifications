@@ -2,11 +2,7 @@
 
 /* global Marionette, $ */
 
-var App = Marionette.Application.extend({
-  initialize: function () {
-    console.log('yep');
-  }
-});
+var App = Marionette.Application.extend({});
 
 var app = new App();
 
