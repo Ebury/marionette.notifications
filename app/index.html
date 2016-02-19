@@ -25,29 +25,80 @@
     <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="https://github.com/Ebury/marionette.notifications/">marionette.notifications.js</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".js-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://github.com/Ebury/">Ebury</a>
+        </div>
+        <div class="collapse navbar-collapse js-navbar">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="https://ebury.github.io/marionette.notifications/">marionette.notifications.js <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
+    <div class="js-notifications-view notifications"></div>
+
     <div class="container">
 
-      <h2>Demo using <a href="https://github.com/Ebury/marionette.notifications/">marionette.notifications.js</a></h2>
+      <h2>Demo</h2>
 
-      <p>Click one of the buttons below to add a global notification. This demo is using the default configuration.</p>
+      <p>How to display global notifications for an application using <strong>marionette.notifications.js</strong></p>
 
-      <div class="btn-group">
-        <button type="button" class="btn btn-success js-add-notification" data-notification-type="success">Add success notification</button>
-        <button type="button" class="btn btn-danger js-add-notification" data-notification-type="danger">Add error notification</button>
-        <button type="button" class="btn btn-warning js-add-notification" data-notification-type="warning">Add warning notification</button>
-        <button type="button" class="btn btn-info js-add-notification" data-notification-type="info">Add info notification</button>
+      <ul>
+        <li>
+          <a href="https://github.com/Ebury/marionette.notifications">Docs</a>
+        </li>
+        <li>
+          <a href="https://github.com/Ebury/marionette.notifications/tree/demo">Demo source code</a>
+        </li>
+      </ul>
+
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#default" role="tab" data-toggle="tab">Default</a></li>
+        <li role="presentation"><a href="#custom" role="tab" data-toggle="tab">Custom</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active fade in" id="default">
+          <p>Click one of the buttons below to add a global notification using the default configuration.</p>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-success js-add-notification" data-notification-type="success">
+              Add success notification
+            </button>
+            <button type="button" class="btn btn-danger js-add-notification" data-notification-type="danger">
+              Add error notification
+            </button>
+            <button type="button" class="btn btn-warning js-add-notification" data-notification-type="warning">
+              Add warning notification
+            </button>
+            <button type="button" class="btn btn-info js-add-notification" data-notification-type="info">
+              Add info notification
+            </button>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="custom">
+          <div class="js-custom-notifications-view"></div>
+          <script type="js-custom-notifications-template">
+            <div class="custom-notification">
+              <i class="glyphicon glyphicon-bell"></i><%= message %>
+            </div>
+          </script>
+          <p>Click one of the buttons below to add a global notification in a custom container and using a custom template.</p>
+
+          <button type="button" class="btn btn-default js-add-notification" data-notification-type="custom">
+            Add notification
+          </button>
+        </div>
       </div>
 
-      <hr>
-
-      <p>
-        <a href="https://github.com/Ebury/marionette.notifications/tree/demo">Demo source code</a>
-      </p>
 
     </div>
 
@@ -57,8 +108,6 @@
         <strong><%= message %></strong>
       </div>
     </script>
-
-    <div class="js-notifications-view notifications"></div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
