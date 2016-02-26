@@ -17,3 +17,8 @@
 .nav-tabs {
   margin-bottom: 15px;
 }
+
+.custom-notifications {
+  max-height: 100px;
+  overflow-y: auto;
+}

@@ -85,12 +85,7 @@
           </div>
         </div>
         <div role="tabpanel" class="tab-pane fade" id="custom">
-          <div class="js-custom-notifications-view"></div>
-          <script type="js-custom-notifications-template">
-            <div class="custom-notification">
-              <i class="glyphicon glyphicon-bell"></i><%= message %>
-            </div>
-          </script>
+          <div class="js-custom-notifications-view custom-notifications"></div>
           <p>Click one of the buttons below to add a global notification in a custom container and using a custom template.</p>
 
           <button type="button" class="btn btn-default js-add-notification" data-notification-type="custom">
@@ -106,6 +101,12 @@
       <div class="alert alert-<%= type %> alert-dismissible" role="alert">
         <button type="button" class="close js-notification-close" data-dismiss="alert">&times;</button>
         <strong><%= message %></strong>
+      </div>
+    </script>
+
+    <script type="text/template" class="js-custom-notifications-template">
+      <div class="custom-notification">
+        <i class="glyphicon glyphicon-bell"></i><%= message %> <span class="date">(<%= new Date() %>)</span>
       </div>
     </script>
 

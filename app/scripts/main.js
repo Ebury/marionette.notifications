@@ -48,3 +48,4 @@ customApp.on('start', function () {
 });
 
 defaultApp.start();
+customApp.start();
