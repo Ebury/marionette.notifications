@@ -57,7 +57,7 @@ gulp.task('test', ['build'], () => {
     }
   });
 
-  gulp.watch('src/**/*.js', ['scripts']);
+  gulp.watch('src/**/*.js', ['build']);
   gulp.watch('src/**/*.js').on('change', reload);
   gulp.watch('test/**/*.html').on('change', reload);
   gulp.watch('test/spec/**/*.js').on('change', reload);

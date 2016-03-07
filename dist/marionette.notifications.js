@@ -165,7 +165,7 @@ Marionette.Application = Marionette.Application.extend({
    */
   constructor: function () {
     oldConstructor.apply(this, arguments);
-    this.createNotificationsView();
+    this.createNotificationsView(arguments);
   }
 });
 
