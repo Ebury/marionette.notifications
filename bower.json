@@ -4,7 +4,7 @@
   "dependencies": {
     "bootstrap": "v3.3.4",
     "backbone.marionette": "^2.4.4",
-    "marionette.notifications": "^0.0.3"
+    "marionette.notifications": "^0.0.4"
   },
   "devDependencies": {
     "chai": "^3.5.0",
