@@ -45,7 +45,9 @@ Marionette.Application = Marionette.Application.extend({
    */
   get _notificationView() {
     return Marionette.ItemView.extend({
-      template: this.notificationTemplate,
+      getTemplate: function(){
+        return this.options.notificationTemplate;
+      },
 
       ui: {
         closeButton: this.notificationCloseSelector
@@ -116,6 +118,7 @@ Marionette.Application = Marionette.Application.extend({
 
       childViewOptions: function() {
         return {
+          notificationTemplate: this.options.notificationTemplate,
           notificationAnimation: this.options.notificationAnimation,
           notificationAutoremove: this.options.notificationAnimation,
           notificationAutoremoveAfter: this.options.notificationAutoremoveAfter
@@ -136,6 +139,7 @@ Marionette.Application = Marionette.Application.extend({
     var extendedOptions = _.extend({
       el: this.notificationViewEl,
       collection: new this._notificationCollection(),
+      notificationTemplate: this.notificationTemplate,
       notificationAnimation: this.notificationAnimation,
       notificationAutoremove: this.notificationAutoremove,
       notificationAutoremoveAfter: this.notificationAutoremoveAfter

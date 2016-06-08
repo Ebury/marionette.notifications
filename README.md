@@ -62,7 +62,24 @@ app.addNotification('success', 'This is a success notification');
 
 ## Options
 
-TODO
+It it possible to configure some options when creating the Marionette application.
+
+```js
+var customApp = new Marionette.Application({
+  notificationTemplate: '.js-custom-notification-template',
+  ...
+});
+```
+
+This is the list of available options
+Option | Description | Default
+------ | ----------- | -------
+`notificationTemplate` | CSS selector of the element that contains the notification template | `.js-notification-template`
+`notificationViewEl` | CSS selector of the element that contains view where the notifications will be rendered | `.js-notifications-view`
+`notificationCloseSelector` | CSS selector of the element that will close a notification after clicking on it | `.js-notification-close`
+`notificationAutoremove` | Enables or disables the auto-removal of the notification after a certain amount of time | `true`
+`notificationAutoremoveAfter` | A notification will be removed after this amount of seconds if `notificationAutoremove` is enabled | `10`
+`notificationAnimation` | Enables or disables a slide effect when displaying/removing a notification | `true`
 
 ## Demo
 [http://ebury.github.io/marionette.notifications/](http://ebury.github.io/marionette.notifications/) 
