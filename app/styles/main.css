@@ -22,3 +22,20 @@
   max-height: 100px;
   overflow-y: auto;
 }
+
+.custom-notifications > *:nth-child(even) {
+  background-color: #eee;
+}
+
+.custom-notification {
+  padding: 5px;
+}
+
+.custom-notification i {
+  margin-right: 5px;
+}
+
+.custom-notification .date {
+  font-style: italic;
+  font-size: 10px;
+}
