@@ -72,6 +72,7 @@ var customApp = new Marionette.Application({
 ```
 
 This is the list of available options
+
 Option | Description | Default
 ------ | ----------- | -------
 `notificationTemplate` | CSS selector of the element that contains the notification template | `.js-notification-template`
